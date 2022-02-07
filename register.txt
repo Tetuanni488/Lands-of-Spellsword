@@ -1,4 +1,8 @@
---log 02/07/2022 2:32
+-- log 02/07/2022 2:32
 
 - Simple character movement 0.1
-- Fix character "gravity
+- Fix character
+
+-- log 02/07/2022
+
+- Character collisions and movement fixed -- 12:10

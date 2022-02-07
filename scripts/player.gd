@@ -9,24 +9,20 @@ var _velocity := Vector3.ZERO
 var _snap_vector := Vector3.DOWN
 
 onready var _spring_arm: SpringArm = $SpringArm
-onready var _model: MeshInstance = $MeshInstance
+onready var _model: Spatial = $Pivot
 
 func _ready():
 	print("player just spawned!")
 
 func _physics_process(delta: float) -> void:	
-	var move_direction = get_input_vector()
+	var move_direction = get_moviment_direction()
 	apply_movement(move_direction)
 	apply_gravity(delta)
 	jump()
 	land()
 	_velocity = move_and_slide(_velocity,Vector3.UP)
-	
-func _process(delta: float) -> void:
-	_spring_arm.translation	= translation
-	_model.translation = translation
 
-func get_input_vector():
+func get_moviment_direction():
 	var move_direction := Vector3.ZERO
 	move_direction.x = Input.get_action_strength("ui_right") - Input.get_action_raw_strength("ui_left")
 	move_direction.z = Input.get_action_strength("ui_down") - Input.get_action_raw_strength("ui_up")

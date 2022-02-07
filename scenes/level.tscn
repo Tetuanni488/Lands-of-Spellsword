@@ -15,7 +15,7 @@ extents = Vector3( 8, 1, 8 )
 [node name="Level" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.38267, 0 )
 
 [node name="Floor" type="StaticBody" parent="."]
 
@@ -28,7 +28,7 @@ material/0 = null
 shape = SubResource( 2 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42093, 4.78452, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
 mesh = SubResource( 3 )
